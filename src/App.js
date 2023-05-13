@@ -1,12 +1,22 @@
 import './App.css';
-import TodoInput from './components/TodoInput/TaskInput';
+import TaskInput from './components/TodoInput/TaskInput';
+import TaskList from './components/TodoList/TaskList';
 
 function App() {
+
+  const dummyList = [
+    {task: 'Coding', id:'t1'},
+    {task: 'Journel', id:'t2'}
+  ];
+  
   return (
     <div className="App">
-      <div id='tasks'>
-        <TodoInput />
-      </div>
+      <section id='task-input'>
+        <TaskInput />
+      </section>
+      <section id='tasks'> 
+        <TaskList todos={dummyList} />
+      </section>
     </div>
   );
 }

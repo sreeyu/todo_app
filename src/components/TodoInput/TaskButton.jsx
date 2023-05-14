@@ -1,9 +1,11 @@
 import './TaskButton.css'
 
-function TaskButton(){
+function TaskButton(props){
     
     return(
-    <button className='btn'>Add Task</button>
+    <button type={props.type} className='btn' onClick={props.onClick}>
+        {props.children}
+        </button>
     );
 };
 

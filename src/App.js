@@ -17,6 +17,23 @@ function App() {
       return taskList;
     });
   };
+
+  const deleteTodo = (todoId) => {
+    setNewTask(prevTask => {
+      const taskList = prevTask.filter(task => task.id !== todoId);
+      return taskList;
+    });
+  };
+
+  let content = (
+    <p style={{textAlign: 'center'}}>Tick-tock, time to rock! Add a task and let's make things happen.</p>
+  )
+
+  if (newTask.length > 0){
+    content =(
+      <TaskList todos={newTask} onDeleteTodo={deleteTodo} />
+    );
+  }
   
   return (
     <div className="App">
@@ -24,7 +41,7 @@ function App() {
         <TaskInput onInput={getTask} />
       </section>
       <section id='tasks'> 
-        <TaskList todos={newTask} />
+        {content}
       </section>
     </div>
   );

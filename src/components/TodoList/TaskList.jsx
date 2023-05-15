@@ -8,7 +8,8 @@ function TaskList(props){
             {props.todos.map(todo => (
                 <TodoItem
                     key={todo.id}
-                    id={todo.id}>
+                    id={todo.id}
+                    onDelete={props.onDeleteTodo}>
                         {todo.task}
                     </TodoItem>
             ))}

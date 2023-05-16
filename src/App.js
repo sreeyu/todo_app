@@ -6,8 +6,8 @@ import TaskList from './components/TodoList/TaskList';
 function App() {
 
   const [newTask, setNewTask] = useState([
-    {task: 'Coding', id:'t1'},
-    {task: 'Journel', id:'t2'}
+    {task: 'Buy groceries for the week', id:'t1'},
+    {task: 'Learn to juggle three balls.', id:'t2'}
   ]);
 
   const getTask = (newTask) =>{

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import styles from './App.module.css';
 import TaskInput from './components/TodoInput/TaskInput';
 import TaskList from './components/TodoList/TaskList';
 
@@ -36,11 +36,11 @@ function App() {
   }
   
   return (
-    <div className="App">
-      <section id='task-input'>
+    <div className={styles.App}>
+      <section id={styles['task-input']}>
         <TaskInput onInput={getTask} />
       </section>
-      <section id='tasks'> 
+      <section id={styles.tasks}> 
         {content}
       </section>
     </div>

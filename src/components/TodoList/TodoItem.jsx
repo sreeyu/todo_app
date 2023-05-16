@@ -1,4 +1,4 @@
-import './TodoItem.css'
+import styles from './TodoItem.module.css'
 
 function TodoItem(props){
 
@@ -7,7 +7,7 @@ function TodoItem(props){
     };
     
     return(
-        <li className='todo-item' onClick={deleteTask}>
+        <li className={styles['todo-item']} onClick={deleteTask}>
             {props.children}
         </li>
     );

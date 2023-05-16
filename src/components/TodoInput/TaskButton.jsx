@@ -1,9 +1,9 @@
-import './TaskButton.css'
+import styles from './TaskButton.module.css'
 
 function TaskButton(props){
     
     return(
-    <button type={props.type} className='btn' onClick={props.onClick}>
+    <button type={props.type} className={styles.btn} onClick={props.onClick}>
         {props.children}
         </button>
     );

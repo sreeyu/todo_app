@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './TaskInput.css';
+import styles from './TaskInput.module.css';
 import TaskButton from './TaskButton';
 
 function TaskInput(props){
 
-    const [enteredTodo, setEnteredTodo] = useState('');
+    const [enteredTodo, setEnteredTodo] = useState("");
     const [isValid, setIsvalid] = useState(true);
 
     const getTodoInput = (event) => {
@@ -21,13 +21,20 @@ function TaskInput(props){
             return;
         }
         props.onInput(enteredTodo);
+        setEnteredTodo("");
+    };
+
+    const handleKey = (event) =>{
+        if (event.key === "Enter"){
+            submitForm(event);
+        }
     };
     
     return (
         <form onSubmit={submitForm}>
-            <div className={`form-input ${isValid ? '' : 'invalid'}`}>
+            <div className={`${styles["form-input"]} ${isValid ? '' : styles.invalid}`}>
                 <label>Enter Task</label>
-                <input type="text" onChange={getTodoInput} />
+                <input value={enteredTodo} type="text" onChange={getTodoInput} onKeyDown={handleKey} />
             </div>
             <TaskButton type='submit' >Add Task</TaskButton>
         </form>

@@ -7,7 +7,7 @@ function App() {
 
   const [newTask, setNewTask] = useState([
     {task: 'Buy groceries for the week', id:'t1'},
-    {task: 'Learn to juggle three balls.', id:'t2'}
+    {task: 'Learn to juggle three balls', id:'t2'}
   ]);
 
   const getTask = (newTask) =>{

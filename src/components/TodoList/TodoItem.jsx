@@ -7,8 +7,10 @@ function TodoItem(props){
     };
     
     return(
-        <li className={styles['todo-item']} onClick={deleteTask}>
-            {props.children}
+        <li className={styles['todo-item']} >
+            <input type="checkbox" />
+            <span>{props.children}</span>
+            <button onClick={deleteTask}>Delete</button>
         </li>
     );
 };

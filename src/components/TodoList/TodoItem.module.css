@@ -6,5 +6,32 @@
     font-weight: bold;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-item button{
+    font: inherit;
+    padding: 0.2rem 1.5rem;
+    border: 1px solid #8B709F;
+    color: #FFF6FF;
+    background-color: #8B709F;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.10);
     cursor: pointer;
+}
+
+.todo-item button:focus{
+    outline: none;
+}
+
+.todo-item button:hover,
+.todo-item button:active{
+    background-color: #B99CCE;
+    border-color: #B99CCE;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.10);
+}
+
+.todo-item input{
+    border: none;
 }
